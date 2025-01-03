@@ -2,10 +2,29 @@
 $arry =
 
  [
+    [
     'name' => "Ahmed Khaled",
     'email' => "ahmed@gmail.com",
     'password' => "password123",
     'age' => 25,
+    ],
+     
+    [
+        'name' => "Sara Othman",
+        'email' => "sara@gmail.com",
+        'password' => "passwordsara",
+        'age' => 24,
+    ],
+
+    [
+        'name' => "Mostafa Khaled",
+        'email' => "mostafa@gmail.com",
+        'password' => "passwordmostafa",
+        'age' => 22,
+
+    ]
+    
+ 
  ]
 
 
@@ -29,24 +48,22 @@ $arry =
     <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">NAME</th>
       <th scope="col">EMAIL</th>
       <th scope="col">PASSWORD</th>
       <th scope="col">AGE</th>
     </tr>
   </thead>
-  <?php foreach ($arry as $key => $value) { ?>
   <tbody>
+      <?php foreach ($arry as $key => $value) { ?>
     <tr>
-      <th scope="row">1</th>
-      <td><?= $arry['name']; ?></td>
-      <td><?= $arry['email']; ?></td>
-      <td><?= $arry['password']; ?></td>
-      <td><?= $arry['age']; ?></td>
+      <td><?php print_r($arry[$key]['name']); ?></td>
+      <td><?php print_r($arry[$key]['email']); ?></td>
+      <td><?php print_r($arry[$key]['password']); ?></td>
+      <td><?php print_r($arry[$key]['age']); ?></td>
     </tr>
+    <?php  } ?>
   </tbody>
-  <?php  } ?>
 </table>
 
 
